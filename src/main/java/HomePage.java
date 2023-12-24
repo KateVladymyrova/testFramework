@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
 
 public class HomePage extends BasePage {
-    private By signInButtonLocator = By.xpath("//a [@class=\"HeaderMenu-link HeaderMenu-link--sign-in flex-shrink-0 no-underline d-block d-lg-inline-block border border-lg-0 rounded rounded-lg-0 p-2 p-lg-0\"]");
+    private By signInButtonLocator = By.xpath("//a[contains(@class,'HeaderMenu-link HeaderMenu-link--sign-in')]");
     private final static String TITLE = "Home page";
 
     public HomePage(WebDriver driver) {

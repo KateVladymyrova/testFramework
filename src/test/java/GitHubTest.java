@@ -4,8 +4,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class GitHubTest extends BaseTest {
-//    Logger logger;
-
     @Test
     public void validateLogoOnTheLoginPageIsDisplayed() {
         Logger logger = LogManager.getLogger();
@@ -33,14 +31,14 @@ public class GitHubTest extends BaseTest {
     public void validateLogoOnTheIssuesPageIsDisplayed() {
         HomePage homePage = new HomePage(driver);
         Assertions.assertTrue(homePage.goToLoginPage().loginSuccessful("work46341@gmail.com",
-                "work46341@gmail.com").goToIssuesPage().getIssuesLogLocator().isDisplayed());
+                "work46341@gmail.com").goToIssuesPage().fiendIssuesLogLocator().isDisplayed());
     }
 
     @Test
     public void validateLogoOnTheNewRepositoryIsDisplayed() {
         HomePage homePage = new HomePage(driver);
         Assertions.assertTrue(homePage.goToLoginPage().loginSuccessful("work46341@gmail.com",
-                        "work46341@gmail.com").goToIssuesPage().goToCreateNew().goToNewRepository().
+                        "work46341@gmail.com").goToIssuesPage().goToCreateMenuButton().goToNewRepository().
                 getNewReLogLocator().isDisplayed());
     }
 }
