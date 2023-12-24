@@ -7,10 +7,11 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClick
 public class MainPage extends BasePage {
     private By headerLocator = By.xpath("//h3[text()=\"Home\"]");
     private By issuesButtonLocator = By.xpath("/html/body/div[1]/div[1]/header/div/div[2]/div[2]/a[1]");
-
+    private final static String TITLE = "Main page";
 
     public MainPage(WebDriver driver) {
-        super(driver);
+
+        super(driver, TITLE);
     }
 
     public WebElement getHeaderLocator() {

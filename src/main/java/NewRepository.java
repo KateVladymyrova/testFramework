@@ -7,10 +7,11 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClick
 public class NewRepository extends BasePage {
     private By newReLogLocator = By.xpath("//span[@class=\"AppHeader-context-item-label  \"]");
     private By newRepositoryButtonLocator = By.xpath("/html/body/div[1]/div[1]/header/div/div[2]/div[2]/action-menu/focus-group/anchored-position/div/div/div/ul/li[1]/a/span[2]");
-
+    private final static String TITLE = "New Repository page";
 
     public NewRepository(WebDriver driver) {
-        super(driver);
+
+        super(driver, TITLE);
     }
 
     public WebElement getNewReLogLocator() {

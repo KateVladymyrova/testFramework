@@ -7,9 +7,10 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClick
 public class IssuesPage extends BasePage {
     private By issuesLogLocator = By.xpath("//span [@class=\"AppHeader-context-item-label  \"]");
     private By createButtonLocator = By.xpath("/html/body/div[1]/div[1]/header/div/div[2]/div[2]/action-menu/focus-group/button/span");
+    private final static String TITLE = "Issues page";
 
     public IssuesPage(WebDriver driver) {
-        super(driver);
+        super(driver, TITLE);
     }
 
     public WebElement getIssuesLogLocator() {
