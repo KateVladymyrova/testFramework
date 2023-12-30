@@ -1,17 +1,19 @@
 package api;
 
 import io.restassured.http.ContentType;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import java.io.File;
-import java.util.*;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasItems;
+import static org.testng.Assert.assertTrue;
 
 
 public class APITest extends BaseApiTest {
@@ -21,7 +23,7 @@ public class APITest extends BaseApiTest {
     private Map<String, Object> reqBody = new HashMap<>();
 
 
-    @BeforeEach
+    @BeforeMethod
     public void setReqBody() {
         Map<String, Object> methodProperties = new HashMap<>();
 
@@ -91,9 +93,9 @@ public class APITest extends BaseApiTest {
                 .then()
                 .spec(responseSpecification)
                 .extract()
-                .body().jsonPath().getList("data[0].Description", Data.class);
+                .body().jsonPath().getList("data[0].ref", Data.class);
 
         System.out.println(dataData);
-        dataData.forEach(el -> Assertions.assertTrue(el.getDescription().contains("Київ")));
+        dataData.forEach(el -> assertTrue(el.getRef().contains("Київ")));
     }
 }

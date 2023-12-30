@@ -6,65 +6,65 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 @JsonDeserialize(as = Data.class)
 public class Data {
-    @JsonProperty("Ref")
+    @JsonProperty("ref")
     public String ref;
-    @JsonProperty("SettlementType")
+    @JsonProperty("settlementType")
     public String settlementType;
-    @JsonProperty("Latitude")
+    @JsonProperty("latitude")
     public String latitude;
-    @JsonProperty("Longitude")
+    @JsonProperty("longitude")
     public String longitude;
-    @JsonProperty("Description")
+    @JsonProperty("description")
     public String description;
-    @JsonProperty("DescriptionRu")
+    @JsonProperty("descriptionRu")
     public String descriptionRu;
-    @JsonProperty("DescriptionTranslit")
+    @JsonProperty("descriptionTranslit")
     public String descriptionTranslit;
-    @JsonProperty("SettlementTypeDescription")
+    @JsonProperty("settlementTypeDescription")
     public String settlementTypeDescription;
-    @JsonProperty("SettlementTypeDescriptionRu")
+    @JsonProperty("settlementTypeDescriptionRu")
     public String settlementTypeDescriptionRu;
-    @JsonProperty("SettlementTypeDescriptionTranslit")
+    @JsonProperty("settlementTypeDescriptionTranslit")
     public String settlementTypeDescriptionTranslit;
-    @JsonProperty("Region")
+    @JsonProperty("region")
     public String region;
-    @JsonProperty("RegionsDescription")
+    @JsonProperty("regionsDescription")
     public String regionsDescription;
-    @JsonProperty("RegionsDescriptionRu")
+    @JsonProperty("regionsDescriptionRu")
     public String regionsDescriptionRu;
-    @JsonProperty("RegionsDescriptionTranslit")
+    @JsonProperty("regionsDescriptionTranslit")
     public String regionsDescriptionTranslit;
-    @JsonProperty("Area")
+    @JsonProperty("area")
     public String area;
-    @JsonProperty("AreaDescription")
+    @JsonProperty("areaDescription")
     public String areaDescription;
-    @JsonProperty("AreaDescriptionRu")
+    @JsonProperty("areaDescriptionRu")
     public String areaDescriptionRu;
-    @JsonProperty("AreaDescriptionTranslit")
+    @JsonProperty("areaDescriptionTranslit")
     public String areaDescriptionTranslit;
-    @JsonProperty("Index1")
+    @JsonProperty("index1")
     public String index1;
-    @JsonProperty("Index2")
+    @JsonProperty("index2")
     public String index2;
-    @JsonProperty("IndexCOATSU1")
+    @JsonProperty("indexCOATSU1")
     public String indexCOATSU1;
-    @JsonProperty("Delivery1")
+    @JsonProperty("delivery1")
     public String delivery1;
-    @JsonProperty("Delivery2")
+    @JsonProperty("delivery2")
     public String delivery2;
-    @JsonProperty("Delivery3")
+    @JsonProperty("delivery3")
     public String delivery3;
-    @JsonProperty("Delivery4")
+    @JsonProperty("delivery4")
     public String delivery4;
-    @JsonProperty("Delivery5")
+    @JsonProperty("delivery5")
     public String delivery5;
-    @JsonProperty("Delivery6")
+    @JsonProperty("delivery6")
     public String delivery6;
-    @JsonProperty("Delivery7")
+    @JsonProperty("delivery7")
     public String delivery7;
-    @JsonProperty("SpecialCashCheck")
+    @JsonProperty("specialCashCheck")
     public int specialCashCheck;
-    @JsonProperty("Warehouse")
+    @JsonProperty("warehouse")
     public String warehouse;
 
     @JsonCreator
@@ -122,7 +122,9 @@ public class Data {
     public String getRef() {
         return ref;
     }
-
+    public void getRef (String ref) {
+        ref = ref;
+    }
     public String getSettlementType() {
         return settlementType;
     }
